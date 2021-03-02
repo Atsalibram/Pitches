@@ -1,44 +1,41 @@
-<nav class="navbar navbar-horizontal navbar-expand-lg navbar-dark bg-info fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="/">World Wide News</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-info" aria-controls="navbar-info" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbar-info">
-            <div class="navbar-collapse-header">
-                <div class="row">
-                    <div class="col-6 collapse-brand">
-                        <a href="javascript:void(0)">
-                        </a>
-                    </div>
-                    <div class="col-6 collapse-close">
-                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-info" aria-controls="navbar-info" aria-expanded="false" aria-label="Toggle navigation">
-                            <span></span>
-                            <span></span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link nav-link-icon" href="#">
-                        <i class="fab fa-facebook-square"></i>
-                        <span class="nav-link-inner--text">Facebook</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-icon" href="#">
-                        <i class="fab fa-twitter"></i>
-                        <span class="nav-link-inner--text">Twitter</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-icon" href="#">
-                        <i class="fab fa-instagram"></i>
-                        <span class="nav-link-inner--text">Instagram</span>
-                    </a>
-                </li>
+        <a class="navbar-brand" href="#">Pitch</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="{{url_for('main.index')}}">Home</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Category<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="{{url_for('main.product')}}">Product Pitch</a></li>
+  
+              <li><a href="{{url_for('main.pickup')}}">Pickup Lines</a></li>
+  
+  
             </ul>
-        </div>
+          </li>
+  
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+  
+          {% if current_user.is_authenticated %}
+  
+          li><a href="{{url_for('main.profile',uname=current_user.username)}}"><span class="glyphicon glyphicon-log-in"></span>Profile</a></li>
+  
+          <li><a href="{{url_for('auth.logout')}}"><span class="glyphicon glyphicon-log-in"></span> Sign Out</a></li>
+          {% else %}
+          <li><a href="{{url_for('auth.login')}}"><span class="glyphicon glyphicon-log-in"></span> Sign In</a></li>
+           {%endif%}
+          <li><a href="{{url_for('auth.register')}}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        </ul>
+      </div>
     </div>
-</nav>
+  </nav>
+  
