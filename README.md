@@ -1,5 +1,5 @@
 # PITCHES
-### This project was done using Python 3.6  and Flask.##
+### This project was done using Python 3.7  and Flask.##
 # DESCRIPTION
 This is a Python-Flask application that allows users to use one minute to make a comment and submit it in terms ofpitches. A different user will have to vote on the submitted comment(pitch) and will also have to leave a comment on ones feedback about the same comment that was created before with the one minute!.
 ## User Story
@@ -13,17 +13,17 @@ This is a Python-Flask application that allows users to use one minute to make a
 - Users are able to submit a pitch in any category.
 - Users can view the different categories.
 #### Technologies Used
-Python3.6
+Python3.7
 ### Known Bugs
 * There are no known bugs at the moment
 ### Contact and Support
-In case you have any issue ,cocenrs, additions, substraction or support on this project, making contributions to codes, you are welcomed to reach out to me (njeanbeda@gmail.com; Tel: +254720427590).
+In case you have any issue ,cocenrs, additions, substraction or support on this project, making contributions to codes, you are welcomed to reach out to me (atsalibaram@gmail.com;).
 ### Setup/Installation Requirements
 ### The application requires the following installations to operate
 * python3.6
 * pip
 ### Link
-https://github.com/Jeanbede/pitches.git
+https://github.com/Atsalibram/pitches.git
 ### License
  MIT licence
- copyright(c) 2021 #Jean Bede#
+ copyright(c) 2021 #Bramuel Amariati#
